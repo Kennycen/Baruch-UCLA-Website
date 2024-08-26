@@ -1,0 +1,21 @@
+.discord-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    padding: 0 auto;
+}
+.discord-content a {
+    width: 200px;
+}
+.discord-text h2 {
+    font-size: var(--h2-font);
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: #000;
+}
+.discord-text p {
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: #000;
+}
