@@ -112,18 +112,18 @@ body {
     .home {
         height: 85vh;
     }
-    .newsletter-content {
+    .discord-content {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         align-items: center;
     }
-    .newsletter-content a {
+    .discord-content a {
         margin: 0 auto;
     }
-    .newsletter-text h2 {
+    .discord-text h2 {
         text-align: center;
     }
-    .newsletter-text p {
+    .discord-text p {
         text-align: center;
     }
 }
@@ -137,18 +137,18 @@ body {
     section {
         padding: 60px 3% 50px;
     }
-    .newsletter-content {
+    .discord-content {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         align-items: center;
     }
-    .newsletter-content a {
+    .discord-content a {
         margin: 0 auto;
     }
-    .newsletter-text h2 {
+    .discord-text h2 {
         text-align: center;
     }
-    .newsletter-text p {
+    .discord-text p {
         text-align: center;
     }
 }
