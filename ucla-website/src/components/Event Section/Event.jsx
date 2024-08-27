@@ -15,8 +15,8 @@ const Event = () => {
             <Box src='t3.jpg' event='SOC' name='Title and Date'/>
         </div>
 
-        <div class="center-btn">
-            <a href="https://www.instagram.com/baruch_ucla/" class="btn">See More</a>
+        <div className="center-btn">
+            <a href="https://www.instagram.com/baruch_ucla/" className="btn">See More</a>
         </div>
     </section>
   )
