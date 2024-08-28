@@ -20,20 +20,20 @@ const Team = () => {
             <ImageCont src='nap5.jpg' title='🏞️ Graphics 🏞️' name='Tiffany Lung'/>
             <ImageCont src='nap5.jpg' title='🪪 Membership 🪪' name='Anna Deng'/>
             <ImageCont src='nap5.jpg' title='🪪 Membership 🪪' name='Puspita Esha'/>
-            <ImageCont src='nap5.jpg' title='🫂 Philanthropy 🫂' name='Kaylin Zhoux'/>
+            <ImageCont src='nap5.jpg' title='🫂 Philanthropy 🫂' name='Kaylin Zhou'/>
             <ImageCont src='nap5.jpg' title='🫂 Philanthropy 🫂' name='Bin Liu'/>
             <ImageCont src='nap5.jpg' title='📹 Media Production 📹' name='Kenny Cen'/>
             <ImageCont src='nap5.jpg' title='📹 Media Production 📹' name='Iven Yang'/>
-            <ImageCont src='nap5.jpg' title='💸 Fundraising 💸' name='Hinson Deng'/>
-            <ImageCont src='nap5.jpg' title='💸 Fundraising 💸' name='Justin Liu'/>
-            <ImageCont src='Ivan Yang.jpeg' title='📊 Marketing 📊' name='Ivan Tan'/>
-            <ImageCont src='nap5.jpg' title='📊 Marketing 📊' name='Mina Chen'/>
+            <ImageCont src='nap5.jpg' title='💸 Fundraising 💸' name='Hinson Dong'/>
+            <ImageCont src='justin.png' title='💸 Fundraising 💸' name='Justin Liu'/>
+            <ImageCont src='ivan.jpeg' title='📊 Marketing 📊' name='Ivan Tan'/>
+            <ImageCont src='mina.png' title='📊 Marketing 📊' name='Mina Chen'/>
             <ImageCont src='nap5.jpg' title='⛩️ CLP ⛩️' name='Stuart Xu'/>
-            <ImageCont src='nap5.jpg' title='⛩️ CLP ⛩️' name='Ming Shuo Zhang'/>
+            <ImageCont src='nap5.jpg' title='⛩️ CLP ⛩️' name='Mingshuo Zhang'/>
             <ImageCont src='nap5.jpg' title='🖊️ Assistant Treasurer 🖊️' name='Peiling Luo'/>
             <ImageCont src='nap5.jpg' title='🖊️ Assistant Treasurer 🖊️' name='Johnson Guo'/>
             <ImageCont src='nap5.jpg' title='🤝 Public Relations 🤝' name='Anson Wat'/>
-            <ImageCont src='nap5.jpg' title='🎏 Events 🎏' name='Fiona Cheng'/>
+            <ImageCont src='fiona.png' title='🎏 Events 🎏' name='Fiona Cheng'/>
             <ImageCont src='nap5.jpg' title='🎏 Events 🎏' name='Bryan Ang'/>
         </div>
     </section>

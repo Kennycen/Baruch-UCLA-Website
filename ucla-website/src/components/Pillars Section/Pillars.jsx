@@ -12,7 +12,7 @@ const Pillars = () => {
             <PillarRows pillar='Family' src='family.png'/>
             <PillarRows pillar='Service' src='service.png'/>
             <PillarRows pillar='Culture'src='culture.png'/>
-            <PillarRows pillar='Mentorship' src='mentorship.png'/>
+            <PillarRows pillar='Mentorship' src='mentor.png'/>
         </div>
     </section>
   )
