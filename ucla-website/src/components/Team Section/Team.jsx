@@ -20,11 +20,11 @@ const Team = () => {
             <ImageCont src='nap5.jpg' title='🏞️ Graphics 🏞️' name='Tiffany Lung'/>
             <ImageCont src='nap5.jpg' title='🪪 Membership 🪪' name='Anna Deng'/>
             <ImageCont src='nap5.jpg' title='🪪 Membership 🪪' name='Puspita Esha'/>
-            <ImageCont src='nap5.jpg' title='🫂 Philanthropy 🫂' name='Kaylin Zhou'/>
-            <ImageCont src='nap5.jpg' title='🫂 Philanthropy 🫂' name='Bin Liu'/>
+            <ImageCont src='kaylin.png' title='🫂 Philanthropy 🫂' name='Kaylin Zhou'/>
+            <ImageCont src='bin.png' title='🫂 Philanthropy 🫂' name='Bin Lu'/>
             <ImageCont src='nap5.jpg' title='📹 Media Production 📹' name='Kenny Cen'/>
             <ImageCont src='nap5.jpg' title='📹 Media Production 📹' name='Iven Yang'/>
-            <ImageCont src='nap5.jpg' title='💸 Fundraising 💸' name='Hinson Dong'/>
+            <ImageCont src='hinson.png' title='💸 Fundraising 💸' name='Hinson Dong'/>
             <ImageCont src='justin.png' title='💸 Fundraising 💸' name='Justin Liu'/>
             <ImageCont src='ivan.jpeg' title='📊 Marketing 📊' name='Ivan Tan'/>
             <ImageCont src='mina.png' title='📊 Marketing 📊' name='Mina Chen'/>
