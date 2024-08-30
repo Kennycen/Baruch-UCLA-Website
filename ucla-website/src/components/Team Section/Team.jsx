@@ -30,8 +30,8 @@ const Team = () => {
             <ImageCont src='mina.png' title='📊 Marketing 📊' name='Mina Chen'/>
             <ImageCont src='nap5.jpg' title='⛩️ CLP ⛩️' name='Stuart Xu'/>
             <ImageCont src='nap5.jpg' title='⛩️ CLP ⛩️' name='Mingshuo Zhang'/>
-            <ImageCont src='nap5.jpg' title='🖊️ Assistant Treasurer 🖊️' name='Peiling Luo'/>
-            <ImageCont src='nap5.jpg' title='🖊️ Assistant Treasurer 🖊️' name='Johnson Guo'/>
+            <ImageCont src='nap5.jpg' title='🖊️ Assist. Treasurer 🖊️' name='Peiling Luo'/>
+            <ImageCont src='nap5.jpg' title='🖊️ Assist. Treasurer 🖊️' name='Johnson Guo'/>
             <ImageCont src='nap5.jpg' title='🤝 Public Relations 🤝' name='Anson Wat'/>
             <ImageCont src='fiona.png' title='🎏 Events 🎏' name='Fiona Cheng'/>
             <ImageCont src='nap5.jpg' title='🎏 Events 🎏' name='Bryan Ang'/>

@@ -43,7 +43,6 @@
     color: #fff;
 }
 .box img:hover {
-    filter: brightness(90%) hue-rotate(50deg);
     transform: scale(1.04);
     cursor: pointer;
 }
