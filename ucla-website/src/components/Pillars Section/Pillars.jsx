@@ -9,10 +9,10 @@ const Pillars = () => {
             <h2>PILLARS</h2>
         </div>
         <div className="pillar-content">
-            <PillarRows pillar='Family' src='family.png'/>
-            <PillarRows pillar='Service' src='service.png'/>
-            <PillarRows pillar='Culture'src='culture.png'/>
-            <PillarRows pillar='Mentorship' src='mentor.png'/>
+            <PillarRows pillar='Family' src='Family.png'/>
+            <PillarRows pillar='Service' src='Service.png'/>
+            <PillarRows pillar='Culture'src='Culture.png'/>
+            <PillarRows pillar='Mentorship' src='Mentorship.png'/>
         </div>
     </section>
   )
