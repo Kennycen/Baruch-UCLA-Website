@@ -18,7 +18,7 @@ const Team = () => {
             <ImageCont src='nap5.jpg' title='🏞️ Graphics 🏞️' name='Jessie Tam'/>
             <ImageCont src='nap5.jpg' title='🏞️ Graphics 🏞️' name='Victoria Sung'/>
             <ImageCont src='nap5.jpg' title='🏞️ Graphics 🏞️' name='Tiffany Lung'/>
-            <ImageCont src='nap5.jpg' title='🪪 Membership 🪪' name='Anna Deng'/>
+            <ImageCont src='anna.png' title='🪪 Membership 🪪' name='Anna Deng'/>
             <ImageCont src='nap5.jpg' title='🪪 Membership 🪪' name='Puspita Esha'/>
             <ImageCont src='kaylin.png' title='🫂 Philanthropy 🫂' name='Kaylin Zhou'/>
             <ImageCont src='bin.png' title='🫂 Philanthropy 🫂' name='Bin Lu'/>
@@ -34,7 +34,7 @@ const Team = () => {
             <ImageCont src='nap5.jpg' title='🖊️ Assist. Treasurer 🖊️' name='Johnson Guo'/>
             <ImageCont src='nap5.jpg' title='🤝 Public Relations 🤝' name='Anson Wat'/>
             <ImageCont src='fiona.png' title='🎏 Events 🎏' name='Fiona Cheng'/>
-            <ImageCont src='nap5.jpg' title='🎏 Events 🎏' name='Bryan Ang'/>
+            <ImageCont src='bryan.png' title='🎏 Events 🎏' name='Bryan Ang'/>
         </div>
     </section>
   )
