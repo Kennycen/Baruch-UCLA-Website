@@ -57,7 +57,7 @@ const NavBar = () => {
 
   return (
     <header ref={headerRef}>
-      <img src="logo.png" alt="Baruch UCLA Logo" />
+      <img src="Logo.png" alt="Baruch UCLA Logo" />
 
       <ul className="navbar" ref={navbarRef}>
         <li><a href="#home">Home 🏠</a></li>

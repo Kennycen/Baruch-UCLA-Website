@@ -10,9 +10,9 @@ const Event = () => {
         </div>
 
         <div className="event-content">
-            <Box src='t1.jpg' event='GIM' name='Title and Date'/>
-            <Box src='t2.jpg' event='CLP' name='Title and Date'/>
-            <Box src='social.png' event='SOC' name='Title and Date'/>
+            <Box src='t1.jpg' event='GIM' name='General Interest Meeting'/>
+            <Box src='t2.jpg' event='CLP' name='Cultural Learning Program'/>
+            <Box src='social.png' event='SOC' name='Social Event'/>
         </div>
 
         <div className="center-btn">

@@ -12,7 +12,7 @@ const Culture = () => {
         </div>
 
         <div className="culture-img">
-            <img src="c1.png"/>
+            <img src="chinese_culture.png"/>
         </div>
     </section>
   )
