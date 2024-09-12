@@ -6,7 +6,7 @@ const Event = () => {
   return (
     <section className="event" id="event">
         <div className="center-text">
-            <h2>Upcoming Events</h2>
+            <h2>Our Events</h2>
         </div>
 
         <div className="event-content">
