@@ -8,22 +8,22 @@ const Team = () => {
         <h1>Meet the Team</h1>
         <h2>E-board</h2>
         <div className="board-container">
-            <ImageCont src='nap5.jpg' title='👨‍💼 President 👨‍💼' name='Anthony Zhang'/>
-            <ImageCont src='nap5.jpg' title='👔 Vice President 👔' name='Michael Jiang'/>
-            <ImageCont src='nap5.jpg' title='💰 Treasurer 💰' name='Jacky Mei'/>
+            <ImageCont src='anthony.png' title='👨‍💼 President 👨‍💼' name='Anthony Zhang'/>
+            <ImageCont src='michael.png' title='👔 Vice President 👔' name='Michael Jiang'/>
+            <ImageCont src='jacky.png' title='💰 Treasurer 💰' name='Jacky Mei'/>
             <ImageCont src='nap5.jpg' title='📋 Secretary 📋' name='Jamie Wu'/>
         </div>
         <h2>Board</h2>
         <div className="board-container">
-            <ImageCont src='nap5.jpg' title='🏞️ Graphics 🏞️' name='Jessie Tam'/>
+            <ImageCont src='jessie.png' title='🏞️ Graphics 🏞️' name='Jessie Tam'/>
             <ImageCont src='nap5.jpg' title='🏞️ Graphics 🏞️' name='Victoria Sung'/>
             <ImageCont src='nap5.jpg' title='🏞️ Graphics 🏞️' name='Tiffany Lung'/>
             <ImageCont src='anna.png' title='🪪 Membership 🪪' name='Anna Deng'/>
             <ImageCont src='esha.png' title='🪪 Membership 🪪' name='Puspita Esha'/>
             <ImageCont src='kaylin.png' title='🫂 Philanthropy 🫂' name='Kaylin Zhou'/>
             <ImageCont src='bin.png' title='🫂 Philanthropy 🫂' name='Bin Lu'/>
-            <ImageCont src='nap5.jpg' title='📹 Media Production 📹' name='Kenny Cen'/>
-            <ImageCont src='nap5.jpg' title='📹 Media Production 📹' name='Iven Yang'/>
+            <ImageCont src='kenny.png' title='📹 Media Production 📹' name='Kenny Cen'/>
+            <ImageCont src='iven.png' title='📹 Media Production 📹' name='Iven Yang'/>
             <ImageCont src='hinson.png' title='💸 Fundraising 💸' name='Hinson Dong'/>
             <ImageCont src='justin.png' title='💸 Fundraising 💸' name='Justin Liu'/>
             <ImageCont src='ivan.png' title='📊 Marketing 📊' name='Ivan Tan'/>
