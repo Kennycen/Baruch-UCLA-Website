@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const PillarRows = (props) => {
   return (
@@ -9,6 +10,16 @@ const PillarRows = (props) => {
       <h4>{props.pillar}</h4>
     </div>
   );
-}
+};
 
-export default PillarRows
+PillarRows.propTypes = {
+  src: PropTypes.string.isRequired,
+  pillar: PropTypes.string.isRequired,
+};
+
+PillarRows.defaultProps = {
+  src: 'default-pillar.png', // Provide a default image if none is specified
+  pillar: 'Default Pillar',
+};
+
+export default PillarRows;
