@@ -36,7 +36,7 @@ Make sure you have **Node.js** and **npm** installed on your machine.
 
 2. Navigate to the project folder:
    ```bash
-   cd baruch-ucla-website
+   cd ucla-website
 3. Install dependencies:
    ```bash
    npm install
