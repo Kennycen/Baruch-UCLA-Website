@@ -8,9 +8,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        orange: '#e9a033',
+        red: '#992933',
       },
+      fontFamily: {
+        poppins: ["var(--font-poppins)", "sans-serif"]
+      }
     },
   },
   plugins: [],
