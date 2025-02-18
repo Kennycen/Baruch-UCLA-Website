@@ -38,7 +38,7 @@ const Culture = () => {
             initial={{y:-30, opacity: 0}}
             whileInView={{y: 0, opacity: 1}}
             transition={{duration: 0.6, delay: 0.5}}
-            className='llg:w-1/2 flex justify-center px-10 lg:p-0'>
+            className='lg:w-1/2 flex justify-center px-10 lg:p-0'>
             <Image src='/images/misc/chinese_culture.png' alt='' height={500} width={500} className='rounded-xl w-full drop-shadow-xl' />
         </motion.div>
     </div>
