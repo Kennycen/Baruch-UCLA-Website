@@ -1,5 +1,6 @@
 import About from "./components/About";
 import BestMoments from "./components/BestMoments";
+import Chatbot from "./components/Chatbot";
 import Culture from "./components/Culture";
 import Events from "./components/Events";
 import Footer from "./components/Footer";
@@ -19,6 +20,7 @@ export default function Home() {
       <Events />
       <Culture />
       <Team />
+      <Chatbot />
       <Footer />
     </>
   );
