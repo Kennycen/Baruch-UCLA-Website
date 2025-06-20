@@ -11,6 +11,7 @@ This website serves as the digital hub for UCLA at Baruch College, showcasing ou
 - **Responsive Design**: Optimized for all devices (desktop, tablet, mobile)
 - **Modern UI/UX**: Clean, intuitive interface with smooth animations
 - **Interactive Components**: Dynamic navigation, modals, and interactive elements
+- **AI Chatbot Assistant**: Intelligent virtual assistant powered by Google Gemini AI
 - **Performance Optimized**: Fast loading times with Next.js optimization
 - **Accessibility**: Built with accessibility best practices in mind
 
@@ -24,6 +25,7 @@ This website serves as the digital hub for UCLA at Baruch College, showcasing ou
 - **Best Moments**: Photo gallery of memorable events
 - **Culture**: Educational content about Chinese traditions and festivals
 - **Board Members**: Team introduction with detailed profiles
+- **AI Chatbot**: Interactive virtual assistant for visitor inquiries
 - **Footer**: Contact information and social media links
 
 ## Technology Stack
@@ -42,40 +44,14 @@ This website serves as the digital hub for UCLA at Baruch College, showcasing ou
 - **Motion 12.18.1**: Animation library for smooth transitions and effects
 - **Lucide React 0.517.0**: Beautiful, customizable icon library
 
+### AI & Backend Services
+- **Google Gemini AI**: Advanced AI model for intelligent chatbot responses
+- **Axios**: HTTP client for API communication
+- **React Markdown**: Markdown rendering for formatted chatbot responses
+
 ### Development Tools
 - **ESLint 9**: Code linting for maintaining code quality
 - **Turbopack**: Fast bundler for development (enabled with `--turbopack` flag)
-
-## Project Structure
-
-```
-ucla-website/
-├── app/                    # Next.js App Router directory
-│   ├── components/         # React components
-│   │   ├── About.jsx      # About section component
-│   │   ├── BestMoments.jsx # Photo gallery component
-│   │   ├── Culture.jsx    # Culture education component
-│   │   ├── Events.jsx     # Events display component
-│   │   ├── Footer.jsx     # Footer component
-│   │   ├── Hero.jsx       # Hero section component
-│   │   ├── Navbar.jsx     # Navigation component
-│   │   ├── Pillars.jsx    # Core pillars component
-│   │   ├── Team.jsx       # Team members component
-│   │   ├── TeamCard.jsx   # Individual team member card
-│   │   └── TeamModal.jsx  # Team member modal
-│   ├── globals.css        # Global styles
-│   ├── layout.js          # Root layout component
-│   └── page.js            # Home page component
-├── public/                # Static assets
-├── TeamData/              # Team member data
-├── .next/                 # Next.js build output
-├── node_modules/          # Dependencies
-├── package.json           # Project configuration
-├── next.config.mjs        # Next.js configuration
-├── postcss.config.mjs     # PostCSS configuration
-├── eslint.config.mjs      # ESLint configuration
-└── README.md              # Project documentation
-```
 
 ## Getting Started
 
@@ -86,6 +62,19 @@ Before you begin, ensure you have the following installed on your machine:
 - **Node.js** (version 18.17 or higher)
 - **npm** (comes with Node.js) or **yarn**
 - **Git** for version control
+- **Google Gemini AI API Key** for chatbot functionality
+
+### Environment Setup
+
+1. **Create a `.env.local` file** in the root directory:
+   ```bash
+   GOOGLE_API_KEY=your_google_gemini_api_key_here
+   ```
+
+2. **Get a Google Gemini API Key**:
+   - Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
+   - Create a new API key
+   - Add it to your `.env.local` file
 
 ### Installation Steps
 
@@ -102,14 +91,18 @@ Before you begin, ensure you have the following installed on your machine:
    yarn install
    ```
 
-3. **Run the development server**
+3. **Set up environment variables**
+   - Create `.env.local` file with your Google API key
+   - Ensure the file is in the root directory
+
+4. **Run the development server**
    ```bash
    npm run dev
    # or
    yarn dev
    ```
 
-4. **Open your browser**
+5. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000) to view the website.
 
 ### Available Scripts
@@ -119,25 +112,31 @@ Before you begin, ensure you have the following installed on your machine:
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint to check code quality
 
-## Customization Guide
+## AI Chatbot Feature
 
-### Adding New Team Members
+### Overview
+The website features an intelligent AI chatbot assistant named "MaoMao" that helps visitors learn about UCLA at Baruch College. The chatbot is powered by Google Gemini AI and provides conversational responses about the organization.
 
-1. Navigate to the `TeamData/` directory
-2. Add new member data following the existing format
-3. Update the team component to include new members
+### Features
+- **Interactive Chat Interface**: Floating chat widget with expandable interface
+- **Intelligent Responses**: AI-powered responses based on UCLA information
+- **Conversational Design**: Friendly, engaging conversation flow
+- **Markdown Support**: Rich text formatting for responses
+- **Loading States**: Visual feedback during AI processing
+- **Error Handling**: Graceful error handling for failed requests
 
-### Modifying Styles
+### How It Works
+1. Users click the floating cat icon to open the chat interface
+2. The chatbot greets users with helpful suggestions
+3. Users can ask questions about UCLA events, membership, activities, etc.
+4. AI processes queries using Google Gemini with UCLA-specific context
+5. Responses are formatted and displayed in a conversational manner
 
-- Global styles are in `app/globals.css`
-- Component-specific styles use Tailwind CSS classes
-- DaisyUI components can be customized through Tailwind config
-
-### Adding New Sections
-
-1. Create a new component in `app/components/`
-2. Import and add it to the main page in `app/page.js`
-3. Update navigation if needed
+### Customization
+- **Chatbot Personality**: Modify the AI prompt in `app/api/chatbot/route.js`
+- **Response Style**: Adjust conversation tone and length
+- **UI Design**: Customize the chat interface in `app/components/Chatbot.jsx`
+- **Knowledge Base**: Update the `websiteInfo` variable with current information
 
 ## Development Guidelines
 
@@ -159,17 +158,26 @@ Before you begin, ensure you have the following installed on your machine:
 - Ensure keyboard navigation works
 - Test with screen readers
 
+### AI Integration
+- Handle API rate limits gracefully
+- Implement proper error handling for AI responses
+- Cache common responses when appropriate
+- Monitor API usage and costs
+
 ## Deployment
 
 ### Vercel (Recommended)
 1. Connect your GitHub repository to Vercel
 2. Vercel will automatically detect Next.js and deploy
-3. Configure environment variables if needed
+3. Configure environment variables in Vercel dashboard:
+   - Add `GOOGLE_API_KEY` with your Google Gemini API key
 
 ### Other Platforms
 - **Netlify**: Use `npm run build` and deploy the `.next` folder
 - **AWS Amplify**: Connect repository and configure build settings
 - **Traditional hosting**: Build with `npm run build` and serve with `npm run start`
+
+**Important**: Remember to set the `GOOGLE_API_KEY` environment variable in your deployment platform.
 
 ## Contributing
 
@@ -181,18 +189,6 @@ We welcome contributions! Please follow these steps:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-### Contribution Guidelines
-- Follow the existing code style
-- Add comments for complex logic
-- Test your changes thoroughly
-- Update documentation if needed
-
-## Support & Contact
-
-- **Website**: [UCLA at Baruch College Website](https://your-website-url.com)
-- **Email**: [your-email@example.com]
-- **Social Media**: [Add your social media links]
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -202,6 +198,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Thanks to all UCLA at Baruch College members
 - Special thanks to contributors and supporters
 - Built with love for the Chinese culture community
+- Powered by Google Gemini AI for intelligent assistance
 
 ---
 

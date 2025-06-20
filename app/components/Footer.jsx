@@ -130,15 +130,6 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://www.baruch.cuny.edu"
-                    target="_blank"
-                    className="hover:text-[#e9a033] transition-colors"
-                  >
-                    Baruch College
-                  </a>
-                </li>
-                <li>
-                  <a
                     href="https://www.tiktok.com/@baruch_ucla"
                     target="_blank"
                     className="hover:text-[#e9a033] transition-colors"
