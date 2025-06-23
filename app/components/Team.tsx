@@ -2,10 +2,19 @@
 import React, { useState, useEffect } from "react";
 import TeamCard from "./TeamCard";
 import TeamModal from "./TeamModal";
-import { teamData } from "@/TeamData/data";
+import { teamData } from "../../TeamData/data";
 
-const Team = () => {
-  const [selectedMember, setSelectedMember] = useState(null);
+interface TeamMember {
+  name: string;
+  title: string;
+  bio: string;
+  image: string;
+  linkedin?: string;
+  instagram?: string;
+}
+
+const Team = (): React.JSX.Element => {
+  const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
 
   // Disable background scroll when modal is open
   useEffect(() => {
@@ -20,19 +29,19 @@ const Team = () => {
   }, [selectedMember]);
 
   // Helper to get member by slug
-  const getMemberBySlug = (slug) =>
+  const getMemberBySlug = (slug: string): TeamMember | undefined =>
     Object.values(teamData).find(
-      (m) => m.name.toLowerCase().replace(/\s+/g, "-") === slug
+      (m: any) => m.name.toLowerCase().replace(/\s+/g, "-") === slug
     );
 
   // E-board and Board members
-  const eboard = [
+  const eboard: TeamMember[] = [
     teamData.anthony,
     teamData.michael,
     teamData.jacky,
     teamData.jamie,
   ];
-  const board = [
+  const board: TeamMember[] = [
     teamData.jessie,
     teamData.victoria,
     teamData.tiffany,
@@ -41,6 +50,18 @@ const Team = () => {
     teamData.kaylin,
     teamData.bin,
     teamData.kenny,
+    teamData.iven,
+    teamData.hinson,
+    teamData.justin,
+    teamData.ivan,
+    teamData.mina,
+    teamData.stuart,
+    teamData.ming,
+    teamData.peiling,
+    teamData.johnson,
+    teamData.anson,
+    teamData.fiona,
+    teamData.bryan,
   ];
 
   return (
@@ -57,7 +78,9 @@ const Team = () => {
             picture={member.image}
             name={member.name}
             title={member.title}
-            onReadMore={(slug) => setSelectedMember(getMemberBySlug(slug))}
+            onReadMore={(slug) =>
+              setSelectedMember(getMemberBySlug(slug) || null)
+            }
           />
         ))}
       </div>
@@ -69,7 +92,9 @@ const Team = () => {
             picture={member.image}
             name={member.name}
             title={member.title}
-            onReadMore={(slug) => setSelectedMember(getMemberBySlug(slug))}
+            onReadMore={(slug) =>
+              setSelectedMember(getMemberBySlug(slug) || null)
+            }
           />
         ))}
       </div>

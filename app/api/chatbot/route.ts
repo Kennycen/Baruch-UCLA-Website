@@ -1,4 +1,5 @@
 import { GoogleGenAI } from "@google/genai";
+import { NextRequest } from "next/server";
 
 const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_API_KEY });
 
@@ -57,16 +58,26 @@ Cultural and Community Impact
 	•	UCLA serves as a cultural bridge between Baruch College and the broader New York City Chinese community through educational and volunteer efforts.
 `;
 
-export async function POST(request) {
+interface ChatRequest {
+  message: string;
+}
+
+interface ChatResponse {
+  success: boolean;
+  message: string;
+  sender?: string;
+}
+
+export async function POST(request: NextRequest): Promise<Response> {
   try {
-    const { message } = await request.json();
+    const { message }: ChatRequest = await request.json();
 
     if (!message) {
       return Response.json(
         {
           success: false,
           message: "Message is required.",
-        },
+        } as ChatResponse,
         { status: 400 }
       );
     }
@@ -95,14 +106,14 @@ Remember: Keep it short, friendly, and ask a follow-up question!`;
       success: true,
       message: response.text,
       sender: "assistant",
-    });
+    } as ChatResponse);
   } catch (error) {
     console.error("Chat Error", error);
     return Response.json(
       {
         success: false,
         message: "Failed to process your message. Please try again.",
-      },
+      } as ChatResponse,
       { status: 500 }
     );
   }

@@ -4,10 +4,10 @@ import Link from "next/link";
 import { useState } from "react";
 import { Globe } from "lucide-react";
 
-const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+const Navbar = (): React.JSX.Element => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
-  const toggleMobileMenu = () => {
+  const toggleMobileMenu = (): void => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
@@ -21,6 +21,7 @@ const Navbar = () => {
             width={80}
             height={80}
             className="object-contain"
+            priority
           />
         </Link>
 

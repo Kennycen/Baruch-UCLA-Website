@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "motion/react";
 
-const Culture = () => {
+const Culture = (): React.JSX.Element => {
   return (
     <section
       id="culture"

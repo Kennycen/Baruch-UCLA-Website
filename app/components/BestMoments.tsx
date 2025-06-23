@@ -2,12 +2,12 @@
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 
-const BestMoments = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const sliderRef = useRef(null);
-  const totalSlides = 4;
+const BestMoments = (): React.JSX.Element => {
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const totalSlides: number = 4;
 
-  const goToSlide = (index) => {
+  const goToSlide = (index: number): void => {
     if (sliderRef.current) {
       const slideWidth = sliderRef.current.children[0].clientWidth;
       sliderRef.current.style.transform = `translateX(-${
@@ -16,18 +16,18 @@ const BestMoments = () => {
     }
   };
 
-  const nextSlide = () => {
+  const nextSlide = (): void => {
     setCurrentSlide((prev) => (prev + 1) % totalSlides);
   };
 
-  const prevSlide = () => {
+  const prevSlide = (): void => {
     setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
   };
 
   useEffect(() => {
     const slideInterval = setInterval(nextSlide, 3000);
 
-    const handleResize = () => {
+    const handleResize = (): void => {
       goToSlide(currentSlide);
     };
 
@@ -43,11 +43,11 @@ const BestMoments = () => {
     goToSlide(currentSlide);
   }, [currentSlide]);
 
-  const handleNextClick = () => {
+  const handleNextClick = (): void => {
     nextSlide();
   };
 
-  const handlePrevClick = () => {
+  const handlePrevClick = (): void => {
     prevSlide();
   };
 

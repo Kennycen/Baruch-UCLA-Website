@@ -2,12 +2,12 @@
 import React from "react";
 import { motion } from "motion/react";
 
-const Hero = () => {
-  const generationNumber = 15; // Change according to each year
-  const startYear = 2025; // Change number based on starting year
-  const endYear = 2026; // Change number based on ending year
+const Hero = (): React.JSX.Element => {
+  const generationNumber: number = 15; // Change according to each year
+  const startYear: number = 2025; // Change number based on starting year
+  const endYear: number = 2026; // Change number based on ending year
 
-  const handleExploreClick = () => {
+  const handleExploreClick = (): void => {
     const momentSection = document.getElementById("moment");
     if (momentSection) {
       momentSection.scrollIntoView({ behavior: "smooth" });

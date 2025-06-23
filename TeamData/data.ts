@@ -1,4 +1,17 @@
-export const teamData = {
+interface TeamMember {
+  name: string;
+  title: string;
+  image: string;
+  bio: string;
+  linkedin: string;
+  instagram: string;
+}
+
+interface TeamData {
+  [key: string]: TeamMember;
+}
+
+export const teamData: TeamData = {
   // E-board Members
   anthony: {
     name: "Anthony Zhang",

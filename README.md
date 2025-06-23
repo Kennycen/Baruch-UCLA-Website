@@ -4,7 +4,7 @@ Welcome to the official website repository for **UCLA at Baruch College**, a stu
 
 ## Project Overview
 
-This website serves as the digital hub for UCLA at Baruch College, showcasing our activities, events, and mission. Built with modern web technologies, it provides an engaging and informative experience for students, visitors, and community members interested in Chinese culture.
+This website serves as the digital hub for UCLA at Baruch College, showcasing our activities, events, and mission. Built with modern web technologies and TypeScript, it provides an engaging and informative experience for students, visitors, and community members interested in Chinese culture.
 
 ### Key Features
 
@@ -13,6 +13,7 @@ This website serves as the digital hub for UCLA at Baruch College, showcasing ou
 - **Interactive Components**: Dynamic navigation, modals, and interactive elements
 - **AI Chatbot Assistant**: Intelligent virtual assistant powered by Google Gemini AI
 - **Performance Optimized**: Fast loading times with Next.js optimization
+- **TypeScript Support**: Full type safety and enhanced developer experience
 - **Accessibility**: Built with accessibility best practices in mind
 
 ### Website Sections
@@ -34,6 +35,11 @@ This website serves as the digital hub for UCLA at Baruch College, showcasing ou
 - **Next.js 15.3.3**: React framework with App Router for server-side rendering and static generation
 - **React 19.0.0**: Latest version for building interactive user interfaces
 - **React DOM 19.0.0**: React rendering for web applications
+
+### TypeScript & Development
+- **TypeScript 5.8.3**: Static type checking and enhanced developer experience
+- **@types/react 19.1.8**: TypeScript definitions for React
+- **@types/node 24.0.3**: TypeScript definitions for Node.js
 
 ### Styling & UI
 - **Tailwind CSS 4.1.10**: Utility-first CSS framework for rapid UI development
@@ -72,7 +78,7 @@ Before you begin, ensure you have the following installed on your machine:
    ```
 
 2. **Get a Google Gemini API Key**:
-   - Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
+   - Visit [Google AI Studio](https://ai.google.dev)
    - Create a new API key
    - Add it to your `.env.local` file
 
@@ -80,7 +86,7 @@ Before you begin, ensure you have the following installed on your machine:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Kennycen/Baruch-UCLA-Website.git
+   git clone https://github.com/Kennycen/ucla-website.git
    cd ucla-website
    ```
 
@@ -133,9 +139,9 @@ The website features an intelligent AI chatbot assistant named "MaoMao" that hel
 5. Responses are formatted and displayed in a conversational manner
 
 ### Customization
-- **Chatbot Personality**: Modify the AI prompt in `app/api/chatbot/route.js`
+- **Chatbot Personality**: Modify the AI prompt in `app/api/chatbot/route.ts`
 - **Response Style**: Adjust conversation tone and length
-- **UI Design**: Customize the chat interface in `app/components/Chatbot.jsx`
+- **UI Design**: Customize the chat interface in `app/components/Chatbot.tsx`
 - **Knowledge Base**: Update the `websiteInfo` variable with current information
 
 ## Development Guidelines
@@ -144,19 +150,21 @@ The website features an intelligent AI chatbot assistant named "MaoMao" that hel
 - Use ESLint for code linting
 - Follow React best practices
 - Use functional components with hooks
-- Implement proper TypeScript types (if migrating to TypeScript)
+- Implement proper TypeScript types and interfaces
+- Use strict TypeScript configuration for better type safety
+
+### TypeScript Benefits
+- **Type Safety**: Catch errors at compile time
+- **Better IntelliSense**: Enhanced autocomplete and suggestions
+- **Refactoring Support**: Safe code refactoring with confidence
+- **Documentation**: Types serve as inline documentation
+- **Maintainability**: Easier to maintain and scale the codebase
 
 ### Performance
 - Optimize images using Next.js Image component
 - Implement proper loading states
 - Use React.memo for expensive components
 - Leverage Next.js built-in optimizations
-
-### Accessibility
-- Use semantic HTML elements
-- Implement proper ARIA labels
-- Ensure keyboard navigation works
-- Test with screen readers
 
 ### AI Integration
 - Handle API rate limits gracefully
@@ -189,9 +197,7 @@ We welcome contributions! Please follow these steps:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+**Note**: This project uses TypeScript. Please ensure all new code includes proper type definitions.
 
 ## Acknowledgments
 
@@ -199,6 +205,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Special thanks to contributors and supporters
 - Built with love for the Chinese culture community
 - Powered by Google Gemini AI for intelligent assistance
+- Enhanced with TypeScript for better development experience
 
 ---
 

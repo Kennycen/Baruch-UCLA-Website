@@ -9,7 +9,7 @@ import Navbar from "./components/Navbar";
 import Pillars from "./components/Pillars";
 import Team from "./components/Team";
 
-export default function Home() {
+export default function Home(): React.JSX.Element {
   return (
     <>
       <Navbar />

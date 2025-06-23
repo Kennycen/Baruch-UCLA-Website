@@ -1,16 +1,26 @@
 "use client";
 import Image from "next/image";
 import { X, Send } from "lucide-react";
-import React, { useState, useEffect, useRef } from "react";
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  FormEvent,
+} from "react";
 import ReactMarkdown from "react-markdown";
 import chatService from "../utils/chatService";
 
-const Chatbot = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState([]);
-  const [inputMessage, setInputMessage] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const messagesEndRef = useRef(null);
+interface Message {
+  text: string;
+  sender: "user" | "assistant" | "system";
+}
+
+const Chatbot = (): React.JSX.Element => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [inputMessage, setInputMessage] = useState<string>("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
   // Control body scroll when chatbot is open
   useEffect(() => {
@@ -19,8 +29,6 @@ const Chatbot = () => {
     } else {
       document.body.style.overflow = "unset";
     }
-
-    // Cleanup function to restore scroll when component unmounts
     return () => {
       document.body.style.overflow = "unset";
     };
@@ -31,23 +39,19 @@ const Chatbot = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isLoading]);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!inputMessage.trim() || isLoading) return;
-
     try {
       setIsLoading(true);
-      const userMessage = {
+      const userMessage: Message = {
         text: inputMessage,
         sender: "user",
       };
-
       setMessages((prev) => [...prev, userMessage]);
       const currentInput = inputMessage;
       setInputMessage("");
-
       const response = await chatService.sendMessage(currentInput);
-
       if (response.success) {
         setMessages((prev) => [
           ...prev,
@@ -57,7 +61,6 @@ const Chatbot = () => {
           },
         ]);
       } else {
-        // Handle error response
         setMessages((prev) => [
           ...prev,
           {
@@ -80,13 +83,15 @@ const Chatbot = () => {
     }
   };
 
-  const renderMessage = (text, sender) => {
+  const renderMessage = (
+    text: string,
+    sender: Message["sender"]
+  ): React.ReactNode => {
     if (sender === "user") {
       return <div className="text-white">{text}</div>;
     } else if (sender === "system") {
       return <div className="text-red-600 text-sm">{text}</div>;
     }
-
     return (
       <div className="prose prose-sm max-w-none">
         <ReactMarkdown
@@ -111,7 +116,7 @@ const Chatbot = () => {
             ),
             a: ({ href, children }) => (
               <a
-                href={href}
+                href={href as string}
                 className="text-blue-600 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -126,6 +131,21 @@ const Chatbot = () => {
       </div>
     );
   };
+
+  // Loading dots component
+  const LoadingDots = (): React.JSX.Element => (
+    <div className="flex space-x-1">
+      <div className="w-2 h-2 bg-gray-600 rounded-full animate-bounce"></div>
+      <div
+        className="w-2 h-2 bg-gray-600 rounded-full animate-bounce"
+        style={{ animationDelay: "0.1s" }}
+      ></div>
+      <div
+        className="w-2 h-2 bg-gray-600 rounded-full animate-bounce"
+        style={{ animationDelay: "0.2s" }}
+      ></div>
+    </div>
+  );
 
   return (
     <div className="fixed bottom-7 right-8 z-50">
@@ -143,7 +163,6 @@ const Chatbot = () => {
           />
         </button>
       )}
-
       {/* Chat Interface */}
       {isOpen && (
         <div className="bg-white border-2 rounded-xl shadow-xl w-[350px] h-[450px] flex flex-col">
@@ -165,7 +184,6 @@ const Chatbot = () => {
               <X className="h-5 w-5" />
             </button>
           </div>
-
           {/* Chat Messages */}
           <div className="flex-1 overflow-y-auto p-4">
             {messages.length === 0 ? (
@@ -183,63 +201,59 @@ const Chatbot = () => {
                 </div>
               </div>
             ) : (
-              messages.map((msg, index) => (
-                <div
-                  key={index}
-                  className={`flex ${
-                    msg.sender === "user" ? "justify-end" : "justify-start"
-                  } mb-2`}
-                >
+              <>
+                {messages.map((msg, index) => (
                   <div
-                    className={`max-w-[80%] p-3 rounded-lg ${
-                      msg.sender === "user"
-                        ? "bg-gray-500 text-white rounded-br-none"
-                        : msg.sender === "system"
-                        ? "bg-red-100 text-red-800 rounded-bl-none"
-                        : "bg-gray-100 text-gray-800 rounded-bl-none"
-                    }`}
+                    key={index}
+                    className={`flex ${
+                      msg.sender === "user" ? "justify-end" : "justify-start"
+                    } mb-2`}
                   >
-                    {renderMessage(msg.text, msg.sender)}
+                    <div
+                      className={`max-w-[80%] p-3 rounded-lg ${
+                        msg.sender === "user"
+                          ? "bg-gray-500 text-white rounded-br-none"
+                          : msg.sender === "system"
+                          ? "bg-red-100 text-red-800 rounded-bl-none"
+                          : "bg-gray-100 text-gray-800 rounded-bl-none"
+                      }`}
+                    >
+                      {renderMessage(msg.text, msg.sender)}
+                    </div>
                   </div>
-                </div>
-              ))
-            )}
-            {isLoading && (
-              <div className="flex justify-start mb-2">
-                <div className="bg-gray-100 text-gray-800 p-3 rounded-lg rounded-bl-none max-w-[80%]">
-                  <div className="flex gap-2">
-                    <span className="animate-bounce">.</span>
-                    <span className="animate-bounce delay-100">.</span>
-                    <span className="animate-bounce delay-200">.</span>
+                ))}
+                {/* Loading indicator */}
+                {isLoading && (
+                  <div className="flex justify-start mb-2">
+                    <div className="max-w-[80%] p-3 rounded-lg bg-gray-100 text-gray-800 rounded-bl-none">
+                      <LoadingDots />
+                    </div>
                   </div>
-                </div>
-              </div>
+                )}
+              </>
             )}
             <div ref={messagesEndRef} />
           </div>
-
           {/* Chat Input */}
           <form
             onSubmit={handleSubmit}
-            className="p-4 border-t bg-white rounded-b-xl"
+            className="p-3 border-t flex items-center gap-2"
           >
-            <div className="flex gap-2">
-              <input
-                type="text"
-                value={inputMessage}
-                onChange={(e) => setInputMessage(e.target.value)}
-                placeholder="Enter your message here"
-                className="flex-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#992933]"
-                disabled={isLoading}
-              />
-              <button
-                type="submit"
-                disabled={isLoading}
-                className="bg-[#992933] text-white p-2 rounded-md hover:bg-red-700 transition-colors disabled:bg-gray-400 cursor-pointer"
-              >
-                <Send className="w-5 h-5" />
-              </button>
-            </div>
+            <input
+              type="text"
+              className="flex-1 border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#e9a033]"
+              placeholder="Type your message..."
+              value={inputMessage}
+              onChange={(e) => setInputMessage(e.target.value)}
+              disabled={isLoading}
+            />
+            <button
+              type="submit"
+              className="bg-[#e9a033] p-2 rounded-lg text-white hover:bg-[#992933] transition disabled:opacity-50"
+              disabled={isLoading || !inputMessage.trim()}
+            >
+              <Send className="h-5 w-5" />
+            </button>
           </form>
         </div>
       )}
