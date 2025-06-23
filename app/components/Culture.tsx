@@ -33,7 +33,7 @@ const Culture = (): React.JSX.Element => {
             transition={{ duration: 0.6, delay: 0.9 }}
             className="mt-4 text-gray-600 leading-relaxed"
           >
-            We are committed to teaching the Baruch community about China's rich
+            We are committed to teaching the Baruch community about China&apos;s rich
             traditions and culture. Through workshops, events, and discussions,
             we provide opportunities for students to explore Chinese heritage,
             fostering cultural appreciation and a more inclusive campus.

@@ -189,7 +189,7 @@ const Chatbot = (): React.JSX.Element => {
             {messages.length === 0 ? (
               <div className="text-center text-gray-500 mt-4">
                 <p className="border-b pb-2 font-bold">
-                  👋 Hi! I'm MaoMao your AI Assistant
+                  👋 Hi! I&apos;m MaoMao your AI Assistant
                 </p>
                 <div className="mt-4 space-y-2 text-sm">
                   <p className="font-semibold">You can ask questions like:</p>

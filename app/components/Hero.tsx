@@ -26,7 +26,7 @@ const Hero = (): React.JSX.Element => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-[#e9a033] font-semibold py-5 text-xl md:text-2xl"
         >
-          LET'S
+          LET&apos;S
         </motion.p>
         <motion.h1
           initial={{ y: -30, opacity: 0 }}
@@ -50,8 +50,8 @@ const Hero = (): React.JSX.Element => {
           transition={{ duration: 0.6, delay: 1.1 }}
           className="mt-5 text-gray-200 text-lg"
         >
-          Baruch UCLA {startYear} Fall term - {endYear} Spring term <br />{" "}
-          United Chinese Language Association Club at Baruch Bernard College
+          Baruch UCLA {startYear} Fall term - {endYear} Spring term <br />
+          United Chinese Language Association Club at Baruch College
         </motion.p>
         <div className="flex items-center mt-8">
           <motion.button
