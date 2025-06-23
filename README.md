@@ -16,19 +16,6 @@ This website serves as the digital hub for UCLA at Baruch College, showcasing ou
 - **TypeScript Support**: Full type safety and enhanced developer experience
 - **Accessibility**: Built with accessibility best practices in mind
 
-### Website Sections
-
-- **Hero Section**: Eye-catching introduction with call-to-action
-- **Navigation Bar**: Interactive navigation with smooth scrolling
-- **Pillars**: Showcase of core values and principles
-- **About Us**: Club overview, mission, and upcoming events
-- **Events**: Cultural events and initiatives calendar
-- **Best Moments**: Photo gallery of memorable events
-- **Culture**: Educational content about Chinese traditions and festivals
-- **Board Members**: Team introduction with detailed profiles
-- **AI Chatbot**: Interactive virtual assistant for visitor inquiries
-- **Footer**: Contact information and social media links
-
 ## Technology Stack
 
 ### Frontend Framework
@@ -143,49 +130,6 @@ The website features an intelligent AI chatbot assistant named "MaoMao" that hel
 - **Response Style**: Adjust conversation tone and length
 - **UI Design**: Customize the chat interface in `app/components/Chatbot.tsx`
 - **Knowledge Base**: Update the `websiteInfo` variable with current information
-
-## Development Guidelines
-
-### Code Style
-- Use ESLint for code linting
-- Follow React best practices
-- Use functional components with hooks
-- Implement proper TypeScript types and interfaces
-- Use strict TypeScript configuration for better type safety
-
-### TypeScript Benefits
-- **Type Safety**: Catch errors at compile time
-- **Better IntelliSense**: Enhanced autocomplete and suggestions
-- **Refactoring Support**: Safe code refactoring with confidence
-- **Documentation**: Types serve as inline documentation
-- **Maintainability**: Easier to maintain and scale the codebase
-
-### Performance
-- Optimize images using Next.js Image component
-- Implement proper loading states
-- Use React.memo for expensive components
-- Leverage Next.js built-in optimizations
-
-### AI Integration
-- Handle API rate limits gracefully
-- Implement proper error handling for AI responses
-- Cache common responses when appropriate
-- Monitor API usage and costs
-
-## Deployment
-
-### Vercel (Recommended)
-1. Connect your GitHub repository to Vercel
-2. Vercel will automatically detect Next.js and deploy
-3. Configure environment variables in Vercel dashboard:
-   - Add `GOOGLE_API_KEY` with your Google Gemini API key
-
-### Other Platforms
-- **Netlify**: Use `npm run build` and deploy the `.next` folder
-- **AWS Amplify**: Connect repository and configure build settings
-- **Traditional hosting**: Build with `npm run build` and serve with `npm run start`
-
-**Important**: Remember to set the `GOOGLE_API_KEY` environment variable in your deployment platform.
 
 ## Contributing
 
