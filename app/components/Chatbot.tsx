@@ -10,16 +10,16 @@ import React, {
 import ReactMarkdown from "react-markdown";
 import chatService from "../utils/chatService";
 
-interface Message {
+type Message = {
   text: string;
   sender: "user" | "assistant" | "system";
 }
 
-const Chatbot = (): React.JSX.Element => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+const Chatbot = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
-  const [inputMessage, setInputMessage] = useState<string>("");
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [inputMessage, setInputMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
   // Control body scroll when chatbot is open
@@ -133,7 +133,7 @@ const Chatbot = (): React.JSX.Element => {
   };
 
   // Loading dots component
-  const LoadingDots = (): React.JSX.Element => (
+  const LoadingDots = () => (
     <div className="flex space-x-1">
       <div className="w-2 h-2 bg-gray-600 rounded-full animate-bounce"></div>
       <div

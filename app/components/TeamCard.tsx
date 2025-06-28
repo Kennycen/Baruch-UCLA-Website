@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 
-interface TeamCardProps {
+type TeamCardProps = {
   picture: string;
   title: string;
   name: string;
@@ -13,7 +13,7 @@ const TeamCard = ({
   title,
   name,
   onReadMore,
-}: TeamCardProps): React.JSX.Element => {
+}: TeamCardProps) => {
   const [imageError, setImageError] = useState(false);
   
   // Create a slug for the team member (could use id if available)

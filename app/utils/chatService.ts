@@ -1,12 +1,12 @@
 import axios from "axios";
 
-interface ChatResponse {
+type ChatResponse = {
   success: boolean;
   message: string;
   sender?: string;
 }
 
-interface ChatRequest {
+type ChatRequest = {
   message: string;
 }
 

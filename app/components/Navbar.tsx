@@ -4,8 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { Globe } from "lucide-react";
 
-const Navbar = (): React.JSX.Element => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+const Navbar = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = (): void => {
     setIsMobileMenuOpen(!isMobileMenuOpen);

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const Footer = (): React.JSX.Element => {
+const Footer = () => {
   return (
     <>
       <footer className="px-6 md:px-16 lg:px-24 xl:px-32 w-full bg-[#992933]">

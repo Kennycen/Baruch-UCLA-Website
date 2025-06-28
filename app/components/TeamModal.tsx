@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-interface TeamMember {
+type TeamMember = {
   name: string;
   title: string;
   bio: string;
@@ -10,7 +10,7 @@ interface TeamMember {
   instagram?: string;
 }
 
-interface TeamModalProps {
+type TeamModalProps =  {
   member: TeamMember | null;
   onClose: () => void;
 }
@@ -18,7 +18,7 @@ interface TeamModalProps {
 const TeamModal = ({
   member,
   onClose,
-}: TeamModalProps): React.JSX.Element | null => {
+}: TeamModalProps) => {
   if (!member) return null;
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">

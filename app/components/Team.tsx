@@ -4,7 +4,7 @@ import TeamCard from "./TeamCard";
 import TeamModal from "./TeamModal";
 import { teamData } from "../../TeamData/data";
 
-interface TeamMember {
+type TeamMember = {
   name: string;
   title: string;
   bio: string;
@@ -13,7 +13,7 @@ interface TeamMember {
   instagram?: string;
 }
 
-const Team = (): React.JSX.Element => {
+const Team = () => {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
 
   // Disable background scroll when modal is open

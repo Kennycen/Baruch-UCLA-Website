@@ -1,6 +1,6 @@
 import React from "react";
 
-const Events = (): React.JSX.Element => {
+const Events = () => {
   return (
     <section
       id="events"

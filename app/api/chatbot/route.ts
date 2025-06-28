@@ -58,11 +58,11 @@ Cultural and Community Impact
 	•	UCLA serves as a cultural bridge between Baruch College and the broader New York City Chinese community through educational and volunteer efforts.
 `;
 
-interface ChatRequest {
+type ChatRequest = {
   message: string;
 }
 
-interface ChatResponse {
+type ChatResponse = {
   success: boolean;
   message: string;
   sender?: string;

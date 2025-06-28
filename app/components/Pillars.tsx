@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { motion } from "motion/react";
 
-const Pillars = (): React.JSX.Element => {
+const Pillars = () => {
   return (
     <section id="pillars" className="container mx-auto text-center py-10 px-4">
       <h1 className="text-4xl md:text-5xl font-bold mb-4">Pillars</h1>

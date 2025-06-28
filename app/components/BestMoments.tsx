@@ -2,8 +2,8 @@
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 
-const BestMoments = (): React.JSX.Element => {
-  const [currentSlide, setCurrentSlide] = useState<number>(0);
+const BestMoments = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
   const sliderRef = useRef<HTMLDivElement>(null);
   const totalSlides: number = 4;
 

@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "motion/react";
 
-const About = (): React.JSX.Element => {
+const About = () => {
   return (
     <section
       id="about"
