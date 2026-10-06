@@ -156,7 +156,7 @@ const Chatbot = () => {
           className="bg-[#992933] p-3 rounded-full shadow-xl hover:bg-red-700 transition cursor-pointer"
         >
           <Image
-            src="/images/icons/fortune_cat.png"
+            src="/icons/fortune_cat.png"
             width={40}
             height={40}
             alt="cat icon"
@@ -170,7 +170,7 @@ const Chatbot = () => {
           <div className="p-3 bg-[#992933] text-white rounded-t-lg flex justify-between items-center">
             <div className="flex items-center gap-2">
               <Image
-                src="/images/icons/fortune_cat.png"
+                src="/icons/fortune_cat.png"
                 width={30}
                 height={30}
                 alt="cat icon"

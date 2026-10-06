@@ -57,7 +57,7 @@ const Culture = () => {
         transition={{ duration: 0.6, delay: 0.5 }}
       >
         <Image
-          src="/images/misc/chinese_culture.png"
+          src="/misc/CHINESECULTURE_Lion.jpg"
           alt="UCLA Family"
           className="hidden md:block w-full max-w-lg rounded-l-xl object-cover h-96 md:h-[600px] rounded-2xl"
           width={400}

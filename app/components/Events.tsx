@@ -11,28 +11,22 @@ const Events = () => {
       </h1>
       <div className="w-full flex flex-col md:flex-row justify-around gap-6 text-white mb-8">
         <div
-          className="h-[30rem] xl:h-[35rem] md:w-1/3 bg-cover rounded-2xl flex items-end p-5 shadow-lg transform transition-transform hover:scale-105 duration-500 ease-in-out cursor-pointer"
-          style={{ backgroundImage: "url('/images/misc/GIM.png')" }}
+          className="h-[30rem] xl:h-[35rem] md:w-1/2 bg-cover bg-center rounded-2xl flex items-end p-5 shadow-lg transform transition-transform hover:scale-105 duration-500 ease-in-out cursor-pointer"
+          style={{
+            backgroundImage: "url('/misc/OUREVENTS_Philanthropy.jpg')",
+          }}
         >
           <div>
             <h3 className="text-xl">
-              GIM <br /> General Interest Meeting
+              PHILANTHROPY <br /> Community Service
             </h3>
           </div>
         </div>
         <div
-          className="h-[30rem] xl:h-[35rem] md:w-1/3 bg-cover rounded-2xl flex items-end p-5 shadow-lg transform transition-transform hover:scale-105 duration-500 ease-in-out cursor-pointer"
-          style={{ backgroundImage: "url('/images/misc/CLP.png')" }}
-        >
-          <div>
-            <h3 className="text-xl">
-              CLP <br /> Cultural Learning Program
-            </h3>
-          </div>
-        </div>
-        <div
-          className="h-[30rem] xl:h-[35rem] md:w-1/3 bg-cover rounded-2xl flex items-end p-5 shadow-lg transform transition-transform hover:scale-105 duration-500 ease-in-out cursor-pointer"
-          style={{ backgroundImage: "url('/images/misc/SOC.png')" }}
+          className="h-[30rem] xl:h-[35rem] md:w-1/2 bg-cover bg-center rounded-2xl flex items-end p-5 shadow-lg transform transition-transform hover:scale-105 duration-500 ease-in-out cursor-pointer"
+          style={{
+            backgroundImage: "url('/misc/OUREVENTS_Social.jpg')",
+          }}
         >
           <div>
             <h3 className="text-xl">

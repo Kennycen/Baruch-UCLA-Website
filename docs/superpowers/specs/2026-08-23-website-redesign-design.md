@@ -16,7 +16,7 @@ existing brand colors are preserved; typography changes.
 - Brand colors `#e9a033` (gold) and `#992933` (maroon) remain the primary identity.
 - Bios contain CJK characters (Chinese and Japanese). The body font stack must
   cover them.
-- All 24 member photos already exist in `public/images/team/`. No new assets or
+- All 24 member photos already exist in `public/team/`. No new assets or
   written content are required.
 
 ## Decisions

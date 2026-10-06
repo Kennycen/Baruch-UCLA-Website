@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   description:
     "The United Chinese Language Association club at Baruch College.",
   icons: {
-    icon: "/images/icons/logo.png",
-    apple: "images/icons/logo.png",
+    icon: "/icons/logo.png",
+    apple: "/icons/logo.png",
   },
 };
 

@@ -11,16 +11,15 @@ Organization Overview
 	•	Name: United Chinese Language Association (UCLA)
 	•	Founded: 2004
 	•	Location: Baruch College, CUNY, New York, NY
-	•	Mission: To promote Chinese American awareness, cultural education, language proficiency, community bonding, and mentorship.
+	•	Mission: To promote Chinese American awareness, cultural education, community bonding, and mentorship.
 	•	Core Pillars:
 	•	Culture: Celebrate Chinese festivals and traditions such as Lunar New Year and Mid-Autumn Festival.
 	•	Family: Build strong social bonds through outings, games, and informal gatherings.
 	•	Service: Organize volunteer and philanthropic activities in New York City.
-	•	Mentorship: Provide structured mentor–mentee relationships to support language learning and cultural integration.
+	•	Mentorship: Provide structured mentor–mentee relationships in programs called "Bao House" to support freshman and sophomore in their college life .
 
 Key Activities
 	•	Educate the Baruch community about Chinese culture through workshops, events, and discussions.
-	•	Offer conversational Mandarin practice in a pressure-free environment.
 	•	Host signature cultural festivals that are open to all Baruch students.
 	•	Create social events and recreational outings to foster a sense of community.
 	•	Lead community service initiatives throughout New York City.
@@ -31,7 +30,7 @@ Membership Requirements
 To become a recognized member of UCLA, students must:
 	•	Attend at least one General Interest Meeting (GIM event).
 	•	Attend at least one Cultural Language Practice (CLP event).
-	•	Attend either one social event (such as a game night or outing) or one philanthropy event (such as a volunteer activity).
+	•	Attend either one social event (such as a game events or outing) or one philanthropy event (such as a volunteer activity).
 
 Leadership Path: Vice President (VP) – UCLA
 
@@ -47,26 +46,26 @@ Organizational Structure
 
 Event Types
 	•	General Interest Meetings (GIM): Introduction to the club's mission and upcoming activities.
-	•	Cultural Language Practice (CLP): Mandarin workshops and conversation circles.
-	•	Social Events: Group outings, game nights, and cultural exchange activities.
+	•	Cultural Language Practice (CLP): Showcase chinese culture and history through interactive events.
+	•	Social Events: Group outings, game days, and sports day.
 	•	Philanthropy Events: Community service and volunteer projects in NYC.
 	•	Cultural Festivals: Campus-wide celebrations such as Lunar New Year and Mid-Autumn Festival.
 
 Cultural and Community Impact
 	•	UCLA welcomes students from all cultural and language backgrounds, including those who are new to Chinese language or culture.
-	•	The club creates a life-long network for students through mentorship, language practice, and community service.
+	•	The club creates a life-long network for students through mentorship, and community service.
 	•	UCLA serves as a cultural bridge between Baruch College and the broader New York City Chinese community through educational and volunteer efforts.
 `;
 
 type ChatRequest = {
   message: string;
-}
+};
 
 type ChatResponse = {
   success: boolean;
   message: string;
   sender?: string;
-}
+};
 
 export async function POST(request: NextRequest): Promise<Response> {
   try {
@@ -78,7 +77,7 @@ export async function POST(request: NextRequest): Promise<Response> {
           success: false,
           message: "Message is required.",
         } as ChatResponse,
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -97,14 +96,14 @@ User question: ${message}
 
 Remember: Keep it short, friendly, and ask a follow-up question!`;
 
-    const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
-      contents: prompt,
+    const response = await ai.interactions.create({
+      model: "gemini-3.5-flash-lite",
+      input: prompt,
     });
 
     return Response.json({
       success: true,
-      message: response.text,
+      message: response.output_text,
       sender: "assistant",
     } as ChatResponse);
   } catch (error) {
@@ -114,7 +113,7 @@ Remember: Keep it short, friendly, and ask a follow-up question!`;
         success: false,
         message: "Failed to process your message. Please try again.",
       } as ChatResponse,
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

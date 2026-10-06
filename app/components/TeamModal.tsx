@@ -70,7 +70,7 @@ const TeamModal = ({
                   className="hover:opacity-80 transition-opacity"
                 >
                   <Image
-                    src="/images/icons/linkedin-icon.png"
+                    src="/icons/linkedin-icon.png"
                     width={30}
                     height={30}
                     alt="linkedin icon"
@@ -85,7 +85,7 @@ const TeamModal = ({
                   className="hover:opacity-80 transition-opacity"
                 >
                   <Image
-                    src="/images/icons/ig-icon.png"
+                    src="/icons/ig-icon.png"
                     width={30}
                     height={30}
                     alt="instagram icon"

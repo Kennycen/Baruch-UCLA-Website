@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-start justify-center gap-10 py-10 border-b border-gray-500/30">
           <div className="max-w-96">
             <Image
-              src="/images/icons/logo.png"
+              src="/icons/logo.png"
               alt="Logo"
               width={80}
               height={80}
@@ -86,7 +86,7 @@ const Footer = () => {
                 className="hover:opacity-80 transition-opacity"
               >
                 <Image
-                  src="/images/icons/linkedin-icon.png"
+                  src="/icons/linkedin-icon.png"
                   width={20}
                   height={20}
                   alt="linkedin icon"
