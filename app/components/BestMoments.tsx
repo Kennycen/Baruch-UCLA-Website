@@ -12,49 +12,34 @@ const BestMoments = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
   const totalSlides = slides.length;
 
-  const goToSlide = (index: number): void => {
-    if (sliderRef.current) {
-      const slideWidth = sliderRef.current.children[0].clientWidth;
-      sliderRef.current.style.transform = `translateX(-${
-        index * slideWidth
-      }px)`;
-    }
-  };
+  useEffect(() => {
+    const slideInterval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % totalSlides);
+    }, 3000);
 
-  const nextSlide = (): void => {
-    setCurrentSlide((prev) => (prev + 1) % totalSlides);
-  };
-
-  const prevSlide = (): void => {
-    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
-  };
+    return () => clearInterval(slideInterval);
+  }, [totalSlides]);
 
   useEffect(() => {
-    const slideInterval = setInterval(nextSlide, 3000);
+    const goToSlide = (index: number): void => {
+      if (sliderRef.current?.children[0]) {
+        const slideWidth = (sliderRef.current.children[0] as HTMLElement)
+          .clientWidth;
+        sliderRef.current.style.transform = `translateX(-${
+          index * slideWidth
+        }px)`;
+      }
+    };
+
+    goToSlide(currentSlide);
 
     const handleResize = (): void => {
       goToSlide(currentSlide);
     };
 
     window.addEventListener("resize", handleResize);
-
-    return () => {
-      clearInterval(slideInterval);
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, [currentSlide]);
-
-  useEffect(() => {
-    goToSlide(currentSlide);
-  }, [currentSlide]);
-
-  const handleNextClick = (): void => {
-    nextSlide();
-  };
-
-  const handlePrevClick = (): void => {
-    prevSlide();
-  };
 
   return (
     <section id="moment" className="bg-[#e9a033] px-4 py-10 text-center">
@@ -66,7 +51,9 @@ const BestMoments = () => {
           id="prev"
           aria-label="Previous moment"
           className="shrink-0 p-1.5 md:p-2.5 bg-[#992933]/85 rounded-full hover:bg-[#992933] transition-colors cursor-pointer"
-          onClick={handlePrevClick}
+          onClick={() =>
+            setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides)
+          }
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +99,9 @@ const BestMoments = () => {
           id="next"
           aria-label="Next moment"
           className="shrink-0 p-1.5 md:p-2.5 bg-[#992933]/85 rounded-full hover:bg-[#992933] transition-colors cursor-pointer"
-          onClick={handleNextClick}
+          onClick={() =>
+            setCurrentSlide((prev) => (prev + 1) % totalSlides)
+          }
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
