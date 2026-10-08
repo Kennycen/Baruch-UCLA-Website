@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "motion/react";
 
 const Hero = () => {
-  const generationNumber: number = 17; // Change according to each year
+  const generationNumber: number = 16; // Change according to each year
   const startYear: number = 2026; // Change number based on starting year
   const endYear: number = 2027; // Change number based on ending year
 

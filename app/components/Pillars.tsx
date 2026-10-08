@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 const pillars = [
   {
-    src: "/misc/PILLAR_Mentorship2.jpg",
+    src: "/misc/family.png",
     alt: "family pillar",
     label: "Family",
     delay: 0.5,

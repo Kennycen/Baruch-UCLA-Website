@@ -9,9 +9,29 @@ const Events = () => {
       <h1 className="text-4xl md:text-5xl font-bold mb-8 text-[#992933]">
         Our Events
       </h1>
-      <div className="w-full flex flex-col md:flex-row justify-around gap-6 text-white mb-8">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 text-white mb-8">
         <div
-          className="h-[30rem] xl:h-[35rem] md:w-1/2 bg-cover bg-center rounded-2xl flex items-end p-5 shadow-lg transform transition-transform hover:scale-105 duration-500 ease-in-out cursor-pointer"
+          className="h-[30rem] xl:h-[35rem] bg-cover bg-center rounded-2xl flex items-end p-5 shadow-lg transform transition-transform hover:scale-105 duration-500 ease-in-out cursor-pointer"
+          style={{ backgroundImage: "url('/misc/GIM.png')" }}
+        >
+          <div>
+            <h3 className="text-xl">
+              GIM <br /> General Interest Meeting
+            </h3>
+          </div>
+        </div>
+        <div
+          className="h-[30rem] xl:h-[35rem] bg-cover bg-center rounded-2xl flex items-end p-5 shadow-lg transform transition-transform hover:scale-105 duration-500 ease-in-out cursor-pointer"
+          style={{ backgroundImage: "url('/misc/CLP.png')" }}
+        >
+          <div>
+            <h3 className="text-xl">
+              CLP <br /> Cultural Learning Program
+            </h3>
+          </div>
+        </div>
+        <div
+          className="h-[30rem] xl:h-[35rem] bg-cover bg-center rounded-2xl flex items-end p-5 shadow-lg transform transition-transform hover:scale-105 duration-500 ease-in-out cursor-pointer"
           style={{
             backgroundImage: "url('/misc/OUREVENTS_Philanthropy.jpg')",
           }}
@@ -23,7 +43,7 @@ const Events = () => {
           </div>
         </div>
         <div
-          className="h-[30rem] xl:h-[35rem] md:w-1/2 bg-cover bg-center rounded-2xl flex items-end p-5 shadow-lg transform transition-transform hover:scale-105 duration-500 ease-in-out cursor-pointer"
+          className="h-[30rem] xl:h-[35rem] bg-cover bg-center rounded-2xl flex items-end p-5 shadow-lg transform transition-transform hover:scale-105 duration-500 ease-in-out cursor-pointer"
           style={{
             backgroundImage: "url('/misc/OUREVENTS_Social.jpg')",
           }}
